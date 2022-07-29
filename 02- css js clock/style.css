@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 25rem;
+    height: 25rem;
+    border: 1rem solid teal;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hands{
+    background: black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    padding: 0.1rem;
+    transform-origin: top left;
+}
+
+.hand1{
+    height:10rem;
+    /* transform: rotate(45deg);    */
+}
+
+.hand2{
+    height: 8rem;
+    /* transform: rotate(115deg);  */
+}
+
+.hand3{
+    height: 8rem;
+    left: 49.2%;
+    /* left: inherit; */
+    /* top:inherit; */
+    /* transform: rotate(30deg);  */
+}
