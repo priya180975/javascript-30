@@ -31,6 +31,7 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+    transform: rotate(180deg);
 }
 
 .hands{
@@ -41,7 +42,8 @@ body{
     left: 50%;
     width: 2px;
     height: 50%;
-    transform-origin: top left;
+    transform-origin: center 0;
+    transition: all 0.5s linear;
 }
 
 .hour{
@@ -59,5 +61,4 @@ body{
 #time-display{
     margin-top: 2rem;
     font-size: 1.3rem;
-
 }

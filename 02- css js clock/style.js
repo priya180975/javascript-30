@@ -10,15 +10,27 @@ setInterval(
         const hour = d.getHours()
         const second =d.getSeconds()
         
-        let end=hour>12?"PM":"AM"
-        let secc=second<10?`0${second}`:`${second}`
+        let end=hour>11?"PM":"AM"
+        let hr=hour?hour>12?hour%12:hour:12
+        function add0(num)
+        {
+            return num<10?`0${num}`:`${num}` 
+        }
 
-        timeDisplay.innerHTML=`${hour/2 -1}:${minute}:${secc} ${end}`
+        timeDisplay.innerHTML=`${add0(hr)}:${add0(minute)}:${add0(second)} ${end}`
 
-        secondHand.setAttribute('style',`transform:rotate(${second*6+180}deg)`)
-        minuteHand.setAttribute('style',`transform:rotate(${minute*6+180}deg)`)
-        hourHand.setAttribute('style',`transform:rotate(${hour*30+180}deg)`)
+        function backTo0(secondHand)
+        {
+            secondHand.style.transform = "rotate(360deg)";
+            setTimeout(function() {
+                secondHand.style.transition = "0s linear";
+                secondHand.style.transform = "rotate(0deg)";
+            },
+            50);
+        }
+
+        secondHand.setAttribute('style',`transform:rotate(${second==0?backTo0(secondHand):second*6}deg)`)
+        minuteHand.setAttribute('style',`transform:rotate(${minute*6}deg)`)
+        hourHand.setAttribute('style',`transform:rotate(${hour*30}deg)`)
     }
 ,1000)
-
-
