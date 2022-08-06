@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root{
+    --blur:0px;
+    --spacing:0px;
+    --bgcolor:#000000;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #55494730;
 }
 
 .container{
@@ -31,8 +38,11 @@ body{
 }
 
 #alter-image{
-    width: 80%;
+    width: 60%;
     margin-top: 1rem;
+    filter: blur(var(--blur));
+    padding: var(--spacing);
+    background-color:var(--bgcolor);
 }
 
 input[type="color"] {
@@ -41,6 +51,7 @@ input[type="color"] {
     width: 100%;
     height: 10px;
     display: block;
+    cursor: pointer;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -55,6 +66,7 @@ input[type=range] {
     display: block;
     height: 10px;
     -webkit-appearance: none;
+    background: none;
 }
 
 input[type=range]:focus {
@@ -76,5 +88,5 @@ input[type=range]::-webkit-slider-thumb {
     border: 1px solid black;
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -4px;
+    margin-top: -3.5px;
 }

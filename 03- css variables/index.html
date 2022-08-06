@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Variables</title>
+    <title>CSS Variables | JS 30</title>
+    <link rel="icon" type="image/gif" href="https://stickercommunity.com/uploads/main/18-11-2020-06-59-50-abc0.webp">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,18 +14,19 @@
         <div class="inputs-container">
             <div class="inputs">
                 <label for="blur">Blur</label>
-                <input type="range" name="blur" id="blur">
+                <input type="range" name="blur" id="blur" value="0" max="20" data-end="px">
             </div>
             <div class="inputs">
                 <label for="spacing">Spacing</label>
-                <input type="range" name="spacing" id="spacing">
+                <input type="range" name="spacing" id="spacing" value="0" data-end="px">
             </div>
             <div class="inputs">
                 <label for="bgcolor">Base Color</label>
-                <input type="color" name="bgcolor" id="bgcolor">
+                <input type="color" name="bgcolor" id="bgcolor" value="#000000">
             </div>
         </div>
         <img src="https://i.pinimg.com/564x/04/8e/8e/048e8e58c870eb1988eef04187a21e05.jpg" alt="image" id="alter-image">
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
