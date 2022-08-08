@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            JS 30 Challenge
+        </div>  
+        <div class="cardsContainer">
+        </div>
+      </div>
+      <script>
+       $(function(){
+        let cardsCont=document.querySelector(".cardsContainer")
+        console.log(cardsCont)
+        $.getJSON('websiteData.json',function(data){
+            console.log('success');
+            $.each(data.arr,function(i,item){
+                let card=document.createElement('div')
+                $(card).addClass("cardBg")
+                card.innerHTML=`
+                <img class="cardBgImage" src=${item.img} />
+                <a href=${item.href} class="cardContent">
+                        <span class="dayNo">${item.id<10?`0 ${item.id}`:`${item.id}`}</span>
+                        <span class="cardTitle">${item.name}</span>
+                </a>
+                 `
+                console.log(card)
+                cardsCont.appendChild(card)
+                console.log(cardsCont)
+            });
+        })
+        .error(function(){
+            console.log('error');
+        });
+    });
+    </script>
+</body>
+</html>
