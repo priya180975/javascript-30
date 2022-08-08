@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,12 +15,11 @@
         <div class="cardsContainer">
         </div>
       </div>
+      <script src="jquery.js"></script>
       <script>
        $(function(){
         let cardsCont=document.querySelector(".cardsContainer")
-        console.log(cardsCont)
         $.getJSON('websiteData.json',function(data){
-            console.log('success');
             $.each(data.arr,function(i,item){
                 let card=document.createElement('div')
                 $(card).addClass("cardBg")
@@ -32,12 +30,10 @@
                         <span class="cardTitle">${item.name}</span>
                 </a>
                  `
-                console.log(card)
                 cardsCont.appendChild(card)
-                console.log(cardsCont)
             });
         })
-        .error(function(){
+        .fail(function(){
             console.log('error');
         });
     });
