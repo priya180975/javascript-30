@@ -3,18 +3,18 @@
         "id":1,
         "name":"javascript drum kit",
         "img":"https://i.pinimg.com/564x/71/d0/f0/71d0f05498be2029ebf250ad32ff237e.jpg",
-        "href":"https://github.com/priya180975"
+        "href":"https://priya180975.github.io/javascript-30/01-%20javascript%20drum%20kit/"
     },
     {
         "id":2,
         "name":"css js clock",
         "img":"https://i.pinimg.com/564x/3b/1c/21/3b1c21fece9b4de66e6eac98d5b822de.jpg",
-        "href":"https://github.com/priya180975"
+        "href":"https://priya180975.github.io/javascript-30/02-%20css%20js%20clock/"
     },
     {
         "id":3,
         "name":"css variables",
         "img":"https://i.pinimg.com/564x/9f/e8/af/9fe8af45ae2217414cfcec01cfb3515c.jpg",
-        "href":"#"
+        "href":"https://priya180975.github.io/javascript-30/03-%20css%20variables/"
     }
 ]}
