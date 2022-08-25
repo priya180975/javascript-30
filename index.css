@@ -8,7 +8,7 @@
 }
 
 body{
-  background:#a6a9987c;
+  background:#ccffb598;
 }
 
 .container{
@@ -23,7 +23,7 @@ body{
 
 .cardsContainer{
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
 }
 
 .cardBg{
@@ -38,8 +38,8 @@ body{
 
 .cardBgImage{
   object-fit: cover;
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 150px;
 }
 
 .cardContent{
@@ -50,8 +50,8 @@ body{
   display: flex;
   flex-direction: column;
   font-size: 0.8rem ;
-  padding: 1.5rem  1rem;
-  width: 230px;
+  padding: 1rem  1rem;
+  width: 200px;
   background: #fff;
   font-weight: 700;
 }
