@@ -51,7 +51,8 @@
         console.log('')
         console.log('%c Array.prototype.sort()', 'color: #55bad1;');
         // 3. Sort the inventors by birthdate, oldest to youngest
-        const sortedInvestor=inventors.sort((a,b)=> a.year>b.year?1:-1)
+        // const sortedInvestor=inventors.sort((a,b)=> a.year>b.year?1:-1)
+        const sortedInvestor=inventors.sort((a,b)=>a.year-b.year )
         console.table(sortedInvestor)
 
 
@@ -59,6 +60,7 @@
         console.log('%c Array.prototype.reduce()', 'color: #55bad1;');
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live all together?
+        // a is previous value b is current value and 0 is the intial value
         const yearsInvestor=inventors.reduce((a,b)=>{
             return a+ (b.passed-b.year)
         },0)
@@ -69,39 +71,50 @@
         console.log('%c Sort the inventors by years lived', 'color: #55bad1;');
         // 5. Sort the inventors by years lived
         const yearSort=inventors.sort(function(a,b){
-            const lastGuy=a.passed-a.year
-            const nextGuy=b.passed-b.year
-            return lastGuy>nextGuy?-1:1
+            const lastGuyAge=a.passed-a.year
+            const nextGuyAge=b.passed-b.year
+            // return lastGuyAge>nextGuyAge?-1:1
+            return nextGuyAge-lastGuyAge //desc
         })
         console.table(yearSort)
 
 
-        console.log('')
-        console.log('%c list of Boulevards in Paris that contain de', 'color: #55bad1;');
+        // console.log('')
+        // console.log('%c list of Boulevards in Paris that contain de', 'color: #55bad1;');
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-        // const 
+        //Nodelist cannot use map
+        const links=[...document.querySelectorAll(".mw-category-group a")]
+        const de=links
+        .map(link=>link.textContent)
+        .filter(text=>text.includes("de"))
         
 
         console.log('')
         console.log('%c sort Exercise', 'color: #55bad1;');
         // 7. sort Exercise
         // Sort the people alphabetically by last name
-        const sort1=people.map(a=>a.split(',')[1])
-        const sortLast=sort1.sort((a,b)=>function(){
-            return a<b?1:-1
-            // a-b
-            // let ele=a.split(',')[1]
-            // let ele2=b.split(',')[1]
-            // return ele-ele2
-            
+        const lastNameSort=people.sort((a,b)=>{
+            const [last,first]=a.split(', ')
+            const [last2,first2]=b.split(', ')
+            return last>last2?1:-1
         })
-        console.table(sortLast)
+        console.log(lastNameSort)
 
+        console.log('')
+        console.log('%c Reduce Exercise', 'color: #55bad1;');
         // 8. Reduce Exercise
         // Sum up the instances of each of these
-        
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+        const sumUp=data.reduce((obj,item)=>{
+            if(!obj[item])
+            {
+                obj[item]=0
+            }
+            obj[item]++ 
+            return obj;
+        },{})
+        console.log(sumUp)
   
     </script>
 </body>
