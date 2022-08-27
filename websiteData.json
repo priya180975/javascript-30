@@ -14,7 +14,7 @@
     {
         "id":3,
         "name":"css variables",
-        "img":"https://i.pinimg.com/564x/9f/e8/af/9fe8af45ae2217414cfcec01cfb3515c.jpg",
+        "img":"https://i.pinimg.com/564x/72/19/ae/7219ae1a801382ff3c9b6a12926ec365.jpg",
         "href":"https://priya180975.github.io/javascript-30/03-%20css%20variables/"
     },
     {
@@ -22,5 +22,11 @@
         "name":"array cardio",
         "img":"https://i.pinimg.com/564x/c7/9a/0e/c79a0ec28d61ddacb71b9c0b891e8a50.jpg",
         "href":"https://priya180975.github.io/javascript-30/04-%20array%20cardio/"
+    },
+    {
+        "id":5,
+        "name":"flex panels image gallery",
+        "img":"https://i.pinimg.com/564x/3b/9b/c8/3b9bc8cd24a769faead515321d5ae94e.jpg",
+        "href":"https://priya180975.github.io/javascript-30/05-%20flex%20panels%20image%20gallery/"
     }
 ]}

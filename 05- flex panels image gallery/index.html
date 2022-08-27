@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Panels Image Gallery | JS 30</title>
+    <link rel="icon" type="image/gif" href="https://stickercommunity.com/uploads/main/18-11-2020-06-59-50-abc0.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block1 blocks"> 
+            <p>Hey</p>
+            <p>Let's</p>
+            <p>Dance</p>
+        </div>
+        <div class="block2 blocks"> 
+            <p>Give</p>
+            <p>Take</p>
+            <p>Receive</p>
+        </div>
+        <div class="block3 blocks"> 
+            <p>Experience</p>
+            <p>It</p>
+            <p>Today</p>
+        </div>
+        <div class="block4 blocks"> 
+            <p>Give</p>
+            <p>All</p>
+            <p>You can</p>
+        </div>
+        <div class="block5 blocks"> 
+            <p>Life</p>
+            <p>In</p>
+            <p>Motion</p>
+        </div>
+    </div>
+
+    <script>
+        let blocks=document.querySelectorAll(".blocks");
+        
+        function open()
+        {
+            this.classList.toggle("opened")
+        }
+
+        function openActive(e)
+        {
+            // console.log(e.propertyName)
+            if(e.propertyName.includes('flex')){
+                this.classList.toggle("openActive")
+            }
+        }
+
+        blocks.forEach(ele=>ele.addEventListener("click",open))
+        blocks.forEach(ele=>ele.addEventListener("transitionend",openActive))
+    </script>
+</body>
+</html>

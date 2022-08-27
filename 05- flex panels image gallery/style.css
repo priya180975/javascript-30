@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+
+*{
+    padding:0;
+    box-sizing:border-box;
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.container{
+    display: flex ;
+    flex-direction: row;
+}
+
+.blocks{
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* border:1px solid #fff; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    overflow: hidden;
+    flex: 1;
+    transition:flex 0.7s;
+}
+
+
+p{
+    flex:1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-shadow: 0rem 0.3rem 0.2rem black;
+    font-size: 1rem;
+    color: #fff;
+    width: 100%;
+    transition: transform 0.5s,font-size 0.7s;
+}
+
+p:nth-child(2){
+    font-size: 2rem;
+}
+
+.blocks.opened{
+    flex: 5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.blocks.opened p:nth-child(2){
+    font-size: 3rem;
+}
+
+.blocks.opened p{
+    font-size: 2rem;
+}
+
+.blocks>*:first-child{
+    transform: translateY(-100%);
+}
+
+.blocks>*:last-child{
+    transform: translateY(100%);
+}
+
+.blocks.openActive>*:first-child{
+    transform: translateY(0);
+}
+
+.blocks.openActive>*:last-child{
+    transform: translateY(0);
+}
+
+.block1{
+    background: url("https://i.pinimg.com/564x/7f/d8/ba/7fd8bad3106cb9fcaaed4a70a26be8d5.jpg");
+}
+
+.block2{
+    background: url("https://i.pinimg.com/564x/b5/79/60/b579608aeddbf3e76b8d458c6beb8fbe.jpg");
+}
+
+.block3{
+    background: url("https://i.pinimg.com/564x/6f/80/25/6f8025c47edf70b42560e2da8c9b1726.jpg");
+}
+
+.block4{
+    background: url("https://i.pinimg.com/736x/5e/6a/55/5e6a5511739f0ea43f7cef1203fe1f5d.jpg");
+}
+
+.block5{
+    background: url("https://i.pinimg.com/564x/3f/31/d9/3f31d9643c9fe0ed47133c25760b7e2e.jpg");
+}
+
+@media(max-width:800px)
+{
+    .container{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .blocks{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
